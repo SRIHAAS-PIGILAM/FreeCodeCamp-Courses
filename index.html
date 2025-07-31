@@ -6,53 +6,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srihaas's FreeCodeCamp Projects</title>
     <style>
+        /* General Body and Container Styles */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 2em;
+            margin: 0;
+            padding: 2em;
             background-color: #f4f4f4;
             color: #333;
         }
 
-        h1 {
-            color: #2c3e50;
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
-        li {
-            margin-bottom: 0.5em;
+        .header h1 {
+            font-size: 2.25rem;
+            /* 36px */
+            font-weight: 800;
+            /* Extra-bold */
+            color: #2563eb;
+            /* A shade of blue */
+            margin-bottom: 0.5rem;
         }
 
-        a {
-            color: #3498db;
+        .header p {
+            font-size: 1.125rem;
+            /* 18px */
+            color: #4b5563;
+            /* A shade of gray */
+        }
+
+        /* Main Projects Section */
+        .projects-main {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+        }
+
+        .projects-main h2 {
+            font-size: 1.5rem;
+            /* 24px */
+            font-weight: 700;
+            /* Bold */
+            color: #374151;
+            /* A shade of dark gray */
+            margin-bottom: 1rem;
+        }
+
+        .projects-main p.description {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Grid for Project Cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+
+            /* sm breakpoint */
+            .projects-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+
+            /* lg breakpoint */
+            .projects-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        /* Individual Project Card Styles */
+        .project-card {
+            display: block;
+            padding: 1rem;
+            background-color: #f9fafb;
+            border-radius: 0.375rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            transition-property: box-shadow;
+            transition-duration: 300ms;
             text-decoration: none;
-            font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .project-card:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .project-card h3 {
+            font-size: 1.125rem;
+            /* 18px */
+            font-weight: 600;
+            /* Semibold */
+            color: #1f2937;
+            /* A dark shade of gray */
+        }
+
+        .project-card p {
+            font-size: 0.875rem;
+            /* 14px */
+            color: #6b7280;
+            /* A lighter gray */
+            margin-top: 0.25rem;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Welcome to My FreeCodeCamp Projects</h1>
-    <p>This is a portfolio of my work from the Responsive Web Design course.</p>
+    <div class="container">
 
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <a
-                href="Responsive-Web-Designing/COURSE-1/01Learn%20HTML%20by%20Building%20a%20Cat%20Photo%20App/Cat_Photo_App.html">
-                Project 1: Cat Photo App
-            </a>
-        </li>
-    </ul>
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Srihaas's FreeCodeCamp Projects</h1>
+            <p>A showcase of my progress in the Responsive Web Design course.</p>
+        </header>
+
+        <!-- Projects Section -->
+        <main class="projects-main">
+            <h2>Projects</h2>
+            <p class="description">Click on a project to view the live website.</p>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 Link -->
+                <a href="Responsive-Web-Designing/COURSE-1/01Learn%20HTML%20by%20Building%20a%20Cat%20Photo%20App/Cat_Photo_App.html"
+                    class="project-card">
+                    <h3>Project 1: Cat Photo App</h3>
+                    <p>A project to learn basic HTML elements and structure.</p>
+                </a>
+
+                <!-- Project 2 Link -->
+                <a href="Responsive-Web-Designing/COURSE-1/02Learn%20Basic%20CSS%20by%20Building%20a%20Cafe%20Menu/Cafe_Menu.html"
+                    class="project-card">
+                    <h3>Project 2: Cafe Menu</h3>
+                    <p>Applying CSS to style a simple web page.</p>
+                </a>
+
+                <!-- Project 3 Link -->
+                <a href="Responsive-Web-Designing/COURSE-1/03Learn%20CSS%20Colors%20by%20Building%20a%20Colored%20Markers%20App/Colored_Markers.html"
+                    class="project-card">
+                    <h3>Project 3: Colored Markers</h3>
+                    <p>Experimenting with CSS colors and gradients.</p>
+                </a>
+
+                <!-- Project 4 Link -->
+                <a href="Responsive-Web-Designing/COURSE-1/04Learn%20the%20CSS%20Box%20Model%20by%20Building%20a%20Rothko%20Painting/Rothko_Painting.html"
+                    class="project-card">
+                    <h3>Project 4: Registration Form</h3>
+                    <p>Understanding creating forms and types of data people can type into forms.</p>
+                </a>
+
+                <!-- Project 5 Link -->
+                <a href="Responsive-Web-Designing/COURSE-1/05Learn%20Flexbox%20by%20Building%20a%20Photo%20Gallery/Photo_Gallery.html"
+                    class="project-card">
+                    <h3>Project 5: Certification Project</h3>
+                    <p>Build a Survey form to collect data from users</p>
+                </a> 
+
+            </div>
+        </main>
+    </div>
 
 </body>
 
