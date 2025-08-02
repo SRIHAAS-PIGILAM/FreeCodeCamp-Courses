@@ -1,0 +1,176 @@
+/*body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+*/
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: Tahoma;
+}
+
+
+form {
+    width: 60vw;
+    max-width: 800px;
+    min-width: 200px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+input {
+    font-size: 15px;
+    width: 80%;
+    height: 30px;
+    border: 3px solid #1b1b32;
+    border-radius: 5px;
+    margin: 2px 0px auto;
+    padding: 0px 10px;
+    background-color: #f5f6f7;
+    color: #1b1b32;
+}
+
+input[type=submit] {
+    font-size: 15px;
+    width: 10%;
+    height: 30px;
+    border: 3px solid #1b1b32;
+    border-radius: 5px;
+}
+
+select {
+    font-size: 15px;
+    width: 30%;
+    height: 25px;
+    border: 3px solid #1b1b32;
+    margin: 2px 0px auto;
+    padding: 0.2px 0 0;
+    background-color: #f5f6f7;
+}
+
+textarea {
+    font-size: 15px;
+    width: 80%;
+    height: 100px;
+    border: 3px solid #1b1b32;
+    border-radius: 5px;
+    margin: 2px 0px auto;
+    padding: 0px 10px;
+    background-color: #f5f6f7;
+    color: #1b1b32;
+}
+
+input[type="checkbox"] {
+    font-size: 15px;
+    width: 10%;
+    height: 25px;
+    border: 3px solid #1b1b32;
+    margin: 2px 0px auto;
+    padding: 0.2px 0 0;
+    background-color: #f5f6f7;
+    color: #1b1b32;
+}
+
+input[type="radio"] {
+    font-size: 10px;
+    width: 10%;
+    height: 25px;
+    border: 3px solid #1b1b32;
+    margin: 2px 0px auto;
+    padding: 0.2px 0 0;
+}
+
+fieldset {
+    border: 3px solid #1b1b32;
+    border-radius: 5px;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+fieldset.Final {
+    border: 3px solid #1b1b32;
+    border-radius: 5px;
+    margin: 1em auto;
+    padding: 1em;
+}
+
+fieldset.Final legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1b1b32;
+    background-color: #f5f6f7;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    color: #1b1b32;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    color: #1b1b32;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0 0;
+    padding: 0;
+    color: #1b1b32;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#description {
+    text-align: center;
+    font-family: serif;
+}
+
+/*
+fieldset.Final{
+    border:none;
+    margin:20px 0px auto;
+    padding:20px;
+}*/
+
+legend {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #1b1b32;
+    background-color: #f5f6f7;
+    padding: 10px;
+}

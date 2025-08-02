@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEY FORM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1 id="title">Placement Survey Form </h1>
+    <h2>Academic Year 2025-26</h2>
+    <p id="description">Thank you for taking the time to help us improve the Understanding of students
+    </p>
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+        <fieldset>
+            <fieldset>
+                <legend>Student Details</legend>
+
+                <label for="name" id="name-label">Student Name:<input id="name" name="name" type="text"
+                        placeholder="Pigilam Srihaas" required />
+                </label>
+                <label for="email" id="email-label">Enter Your Email:<input id="email" name="email" type="email"
+                        placeholder="abcd@gmail.com" required />
+                </label>
+                <label for="" id="number-label">Registration Number<input id="number" name="" type="number"
+                        min=202000001 max=202008500 required placeholder="2020001143" />
+                </label>
+                <label for="first-name">Stream
+                    <select id="dropdown">
+                        <option value="">(select one)</option>
+                        <option value="1">B.TECH</option>
+                        <option value="2">M.TECH</option>
+                        <option value="3">PHD</option>
+                    </select>
+                </label>
+
+                <label for="first-name">Branch
+                    <select>
+                        <option value="">(select one)</option>
+                        <option value="1">AIDS</option>
+                        <option value="2">CSE</option>
+                        <option value="3">IT</option>
+                        <option value="4">CSBS</option>
+                        <option value="5">ECE</option>
+                        <option value="6">EEE</option>
+                        <option value="7">MECH</option>
+                        <option value="8">CIVIL</option>
+                    </select>
+                </label>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Parent Details</legend>
+                <label for="name">Father Name:<input id="name" name="name" type="text" placeholder="Jhon Abraham"
+                        required />
+                    <label for="name">Mother Name:<input id="name" name="name" type="text" placeholder="Lily"
+                            required />
+                        <label for="name">Mobile Number:<input id="name" name="name" type="numeric"
+                                placeholder="9123456780" min=10 max=11 required />
+                            <label for="name">Father Profession:<input id="name" name="name" type="text"
+                                    placeholder="Software Engineer" required />
+            </fieldset>
+
+            <fieldset>
+                <legend>Educational Qualifications</legend>
+                <label for="name">10th Grade Marks(GPA):<input id="name" name="name" type="numeric" min=0.0 max=10.0
+                        placeholder="9.8" required />
+                    <label for="name">12th or Diploma Marks(GPA):<input id="name" name="name" type="numeric" min=0.0
+                            max=10.0 placeholder="9.8" required />
+                        <label for="name">Current UG CGPA/SGPA:<input id="name" name="name" type="numeric" min=0.0
+                                max=10.0 placeholder="9.5" required />
+            </fieldset>
+
+            <fieldset>
+                <label for="first-name">Placed in any Company or Not?
+                    <select>
+                        <option value="">(select one)</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </label>
+
+                <label for="">Reason For Not Placing :
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check1" />Aspiring for
+                        Placement
+                    </label>
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check1" />Waiting for
+                        official confirmation
+                    </label>
+                    <label for=""><input class="inline" type="checkbox" required name=""
+                            value="check2" />Backlogs/Arrears</label>
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check3" />Preparing for
+                        Further studies(M.Tech,PHD,etc)</label>
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check1" />Preparing for
+                        Entrance
+                        Exams
+                    </label>
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check1" />Preparing for
+                        Public
+                        Service Exams
+                    </label>
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check4" /> No proper
+                        assistance from college or staff</label>
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check5" />Lack of
+                        resources</label>
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check5" />Join Family
+                        Business</label>
+                    <label for=""><input class="inline" type="checkbox" required name="" value="check6" />Physically
+                        Abled</label>
+                </label>
+                <label for="personal-account"><input id="personal-account" type="radio" name="account-type"
+                        class="inline" value="option1" checked /> Satisfied with college efforts</label>
+                <label for="business-account"><input id="business-account" type="radio" name="account-type"
+                        class="inline" value="option2" /> Not Satisfied with college efforts</label>
+                <label for="bio">Provide other reasons :<textarea id="bio" name="bio" rows="3" cols="30">optional
+                            </textarea>
+                </label>
+            </fieldset>
+
+            <fieldset class="Final">
+                <legend> Student Declaration</legend>
+                <label for="terms-and-conditions">
+                    <input class="inline" id="" type="checkbox" required name="" value="Declaration 1" />I do hereby
+                    declare
+                    that the statements given above are true to the best of my knowledge and
+                    belief. I will abide by the rules regulations and instructions given by the Training & Placement
+                    Cell.
+                </label>
+                <label for="terms-and-conditions">
+                    <input class="inline" id="" type="checkbox" required name="" value="Declaration 2" />I am aware,
+                    failing
+                    to abide by the placement policy could result in debarring from training and
+                    placement.
+                </label>
+                <input id="submit" type="submit" value="submit" />
+            </fieldset>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
