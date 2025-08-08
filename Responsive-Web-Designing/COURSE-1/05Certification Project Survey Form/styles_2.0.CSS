@@ -1,0 +1,252 @@
+/* Universal Box-Sizing Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    /* height: 100vh; Using 100vh can cause issues with mobile browser toolbars */
+    min-height: 100vh;
+    /* Better to use min-height for content that might extend */
+    margin: 0;
+    background-color: #1b1b32;
+    /* Dark background */
+    color: #f5f6f7;
+    /* Light text */
+    font-family: Tahoma, sans-serif;
+    /* Added sans-serif fallback */
+    font-size: 16px;
+    padding: 20px;
+    /* Padding for the entire body content */
+}
+
+form {
+    width: 60vw;
+    max-width: 800px;
+    min-width: 300px;
+    /* Adjusted min-width slightly for better readability on small screens */
+    margin: 0 auto;
+    padding-bottom: 2em;
+    background-color: #f5f6f7;
+    /* Form background color to make it stand out */
+    color: #1b1b32;
+    /* Text color inside the form */
+    border-radius: 8px;
+    /* Slightly rounded corners for the form */
+    padding: 20px;
+    /* Padding inside the form */
+}
+
+/* Consolidated styles for most input types, selects, and textareas */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    font-size: 15px;
+    width: 100%;
+    /* Make them take full width of their parent label */
+    padding: 10px;
+    /* Consistent padding */
+    border: 3px solid #1b1b32;
+    border-radius: 5px;
+    margin: 5px 0 15px;
+    /* Margin to separate from labels and other inputs */
+    background-color: #f5f6f7;
+    color: #1b1b32;
+    line-height: 1.2;
+    /* Adjust line-height for better text placement */
+}
+
+/* Specific height for textarea */
+textarea {
+    height: 100px;
+    resize: vertical;
+    /* Allow vertical resizing for better usability */
+}
+
+/* Adjust select height for consistent look, or remove for natural sizing */
+select {
+    height: 40px;
+    /* Give select a consistent height, matching inputs */
+    padding: 0 10px;
+    /* Keep horizontal padding */
+}
+
+/* Styles for the submit button */
+input[type="submit"] {
+    display: block;
+    /* Make it a block element to center it */
+    width: 50%;
+    /* Start with 50% width of the form */
+    max-width: 200px;
+    /* Don't let it get too wide on large screens */
+    min-width: 120px;
+    /* Don't let it get too small on tiny screens */
+    height: 45px;
+    /* Slightly taller for better touch target */
+    font-size: 1.1em;
+    /* Slightly larger font */
+    background-color: #4CAF50;
+    /* A pleasant green color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    /* More rounded */
+    cursor: pointer;
+    margin: 20px auto 0;
+    /* Center it horizontally with top margin */
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* General fieldset styling */
+fieldset {
+    border: 3px solid #1b1b32;
+    border-radius: 5px;
+    margin: 1.5em auto;
+    /* Increased vertical margin for more separation */
+    padding: 1.5em;
+    /* Increased padding inside */
+}
+
+/* Specific styling for the Final fieldset */
+fieldset.Final {
+    /* If you want different styles, uncomment and adjust */
+    /* border: 3px solid #1b1b32;
+    border-radius: 5px;
+    margin: 1em auto;
+    padding: 1em; */
+}
+
+fieldset legend {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #1b1b32;
+    background-color: #f5f6f7;
+    padding: 5px 10px;
+    /* Smaller padding for legend */
+    border-radius: 3px;
+    /* Slightly rounded legend corners */
+}
+
+/* Labels for main text inputs/selects/textareas */
+label {
+    display: block;
+    /* Each label takes its own line */
+    margin: 10px 0 5px;
+    /* Spacing for labels */
+    font-weight: bold;
+    /* Make labels stand out */
+}
+
+/* Responsive Font Sizes using clamp() for headings and paragraphs */
+h1 {
+    font-size: clamp(30px, 6vw, 50px);
+    /* Min 30px, Max 50px, fluid in between */
+    margin: 0;
+    padding: 0;
+    color: #f5f6f7;
+    /* Matching body text color */
+    text-align: center;
+}
+
+h2 {
+    font-size: clamp(24px, 4vw, 30px);
+    /* Min 24px, Max 30px, fluid in between */
+    margin: 0;
+    padding: 0;
+    color: #f5f6f7;
+    /* Matching body text color */
+    text-align: center;
+}
+
+p {
+    font-size: clamp(16px, 3vw, 18px);
+    /* Min 16px, Max 18px, fluid in between */
+    margin: 10px 0 0;
+    padding: 0;
+    color: #f5f6f7;
+    /* Matching body text color */
+    text-align: center;
+}
+
+#description {
+    font-family: serif;
+    /* Keeping serif for description as you had */
+}
+
+/* Styles for inline checkbox/radio labels (new class applied in HTML) */
+.inline-label {
+    display: inline-flex;
+    /* Use flexbox to align checkbox/radio with text */
+    align-items: center;
+    /* Vertically center items */
+    margin-right: 1.5em;
+    /* Space between different checkbox/radio groups */
+    margin-bottom: 0.8em;
+    /* Vertical spacing between wrapped inline labels */
+    flex-wrap: wrap;
+    /* Allow items to wrap on small screens */
+    color: #1b1b32;
+    /* Ensure text color is visible against form background */
+    font-size: 0.95em;
+    /* Slightly smaller font for these options */
+}
+
+/* Styles for the actual inline checkbox/radio input elements */
+.inline-checkbox,
+.inline-radio {
+    width: auto;
+    /* Let browser determine natural width */
+    height: auto;
+    /* Let browser determine natural height */
+    margin: 0 0.5em 0 0;
+    /* Space between the input and its text */
+    padding: 0;
+    /* No padding needed for these small inputs */
+    vertical-align: middle;
+    /* Aligns the checkbox/radio button with the text */
+    border: 1px solid #1b1b32;
+    /* Lighter border for these smaller inputs */
+    background-color: #f5f6f7;
+    /* Ensure background is set if needed */
+    color: #1b1b32;
+    /* Ensure color is set if needed */
+}
+
+/* Adjust font size for the entire footer */
+footer {
+    font-size: 0.9em;
+    /* Slightly smaller font for footer */
+    text-align: center;
+    color: #f5f6f7;
+    /* Match body text color */
+    margin-top: 30px;
+    /* Space above footer */
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #f5f6f7;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+a:hover {
+    color: #4CAF50;
+    /* Hover color */
+    text-decoration: underline;
+    /* Add underline on hover */
+}
