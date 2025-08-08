@@ -1,0 +1,268 @@
+/* Core Principle: box-sizing: border-box; for predictable element sizing.
+   This ensures padding and border are included WITHIN the declared width/height. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    /* Use min-height for better mobile behavior */
+    margin: 0;
+    background-color: #1b1b32;
+    /* Your chosen background color */
+    color: #f5f6f7;
+    /* Your chosen text color */
+    font-family: Tahoma, sans-serif;
+    /* Keep sans-serif fallback for broader compatibility */
+    font-size: 16px;
+    /* Base font size, 1rem will be 16px */
+    padding: 1rem;
+    /* Add some padding around the entire body content */
+    display: flex;
+    /* Use flexbox on body to center content vertically/horizontally */
+    flex-direction: column;
+    /* Stack content vertically */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: flex-start;
+    /* Align content to the top initially */
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+    color: #f5f6f7;
+    /* Your chosen text color for headings/paragraphs */
+    /* Use clamp() for fluid typography that scales with viewport but stays within limits */
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    /* Example: 40px, fluid, up to 56px approx */
+    margin: 0.5em auto 0.25em;
+    /* Proportional top/bottom margin for headings */
+    padding: 0;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    /* Example: 28px, fluid, up to 35px approx */
+    margin: 0 auto 1.5em;
+    /* More bottom margin for separation */
+    padding: 0;
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    /* Example: 16px, fluid, up to 17.6px approx */
+    margin: 0.5em auto 1em;
+    padding: 0;
+}
+
+#description {
+    font-family: serif;
+    max-width: 600px;
+    /* Limit description width for readability */
+    line-height: 1.5;
+    /* Improve readability */
+}
+
+form {
+    width: 90vw;
+    /* Make form slightly wider on small screens */
+    max-width: 600px;
+    /* Reduced max-width for a more compact form, good for readability */
+    min-width: 280px;
+    /* Ensure form doesn't get too small */
+    margin: 1.5em auto;
+    /* Vertical spacing and horizontal centering */
+    padding: 1.5em;
+    /* Padding inside the form container */
+    background-color: #f5f6f7;
+    /* Your chosen form background */
+    color: #1b1b32;
+    /* Text color inside the form */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+}
+
+fieldset {
+    border: 2px solid #3b3b4f;
+    /* Reintroduced a consistent border for fieldsets */
+    border-radius: 5px;
+    margin: 1.5em 0;
+    /* Vertical spacing between fieldsets, no horizontal auto */
+    padding: 1.5em 1em;
+    /* Padding inside fieldsets */
+}
+
+fieldset:first-of-type {
+    margin-top: 0;
+    /* Remove top margin for the very first fieldset for tighter layout */
+}
+
+fieldset:last-of-type {
+    margin-bottom: 0;
+    /* Remove bottom margin for the very last fieldset */
+    border-bottom: 2px solid #3b3b4f;
+    /* Ensure last fieldset still has a border */
+}
+
+fieldset legend {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1em;
+    /* Slightly smaller legend font relative to fieldset text */
+    color: #1b1b32;
+    background-color: #f5f6f7;
+    padding: 0.25em 0.75em;
+    /* Proportional padding for legend */
+    border: 1px solid #3b3b4f;
+    /* Border around legend */
+    border-radius: 3px;
+    margin-left: 0.5em;
+    /* Shift legend slightly right */
+}
+
+label {
+    display: block;
+    /* Each label and its nested input will take its own line */
+    margin: 0.8em 0;
+    /* Consistent vertical spacing for labels */
+    font-size: 1.05rem;
+    /* Slightly larger label text */
+    color: #1b1b32;
+    /* Ensure label text is visible against form background */
+}
+
+/* Consolidated styles for text, email, number, textarea, and select inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+    display: block;
+    /* Ensures they take full width if not in an inline context */
+    width: 100%;
+    /* Fill 100% of the parent label's (or fieldset's) available width */
+    min-height: 2.2em;
+    /* KEY: Use em for height, scales proportionally with font-size */
+    font-size: 1rem;
+    /* Consistent font size */
+    padding: 0.6em 0.8em;
+    /* Proportional padding inside input fields */
+    margin-top: 0.3em;
+    /* Small margin between label text and input field */
+    background-color: #ffffff;
+    /* Lighter background for inputs for better contrast */
+    border: 1px solid #a0a0a0;
+    /* Softer border for inputs */
+    border-radius: 4px;
+    /* Slightly more rounded inputs */
+    color: #1b1b32;
+    /* Dark text color inside inputs */
+    line-height: 1.2;
+}
+
+textarea {
+    height: 6em;
+    /* Proportional height for textarea */
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+select {
+    /* Height is handled by min-height and padding. Remove explicit height: 40px; */
+    appearance: none;
+    /* Remove default arrow on some browsers */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231b1b32%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.4l-118%20118.2L18.4%2074.9c-7.8-7.8-20.5-7.8-28.3%200s-7.8%2020.5%200%2028.3l133.3%20133.3c.7.7%201.7%201.2%202.6%201.6c.9.4%201.9.7%202.9.7c1.1%200%202.1-.3%203.1-.8c1-.4%201.9-.9%202.8-1.7L287%20103.7c7.8-7.8%207.8-20.5%200-28.3c-4-4-9.2-5.9-14.3-5.9z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%;
+    background-size: 0.65em auto;
+    padding-right: 2em;
+    /* Make space for custom arrow */
+}
+
+
+/* Styling for checkboxes and radio buttons (using the .inline class) */
+.inline {
+    width: unset;
+    /* Let the browser determine natural width for the input box */
+    margin: 0 0.5em 0 0;
+    /* Space between the input box and label text */
+    vertical-align: middle;
+    /* Aligns the checkbox/radio button with its text */
+    min-height: 1.2em;
+    /* Smaller min-height for checkboxes/radios */
+    font-size: 1rem;
+    /* Ensure consistent font size for checkbox/radio input elements */
+    border: 1px solid #a0a0a0;
+    /* Softer border for these */
+    background-color: #ffffff;
+    /* White background for the actual checkbox/radio box */
+}
+
+/* Styles for the submit button */
+input[type="submit"] {
+    display: block;
+    /* Ensures the button is on its own line and can be centered */
+    width: 60%;
+    /* Proportional width of the form */
+    max-width: 250px;
+    /* Don't let it get too wide on large screens */
+    min-width: 150px;
+    /* Ensure it's not too small on tiny screens */
+    height: 2.8em;
+    /* Proportional height for better touch target */
+    font-size: 1.1rem;
+    /* Larger font for readability and touch */
+    background-color: #3b3b4f;
+    /* Your chosen button background */
+    color: #ffffff;
+    /* Your chosen button text color */
+    border: 1px solid #f5f6f7;
+    /* Your chosen button border color */
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1.5em auto 0;
+    /* Vertical spacing and horizontal centering */
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #4CAF50;
+    /* A hover color */
+    border-color: #4CAF50;
+}
+
+/* Styling for links */
+a {
+    color: #dfdfe2;
+    /* Your chosen link color */
+    text-decoration: underline;
+    /* Default underline for links */
+}
+
+a:hover {
+    color: #4CAF50;
+    /* Hover color */
+}
+
+/* FOOTER - Basic styling */
+footer {
+    font-size: 0.9em;
+    text-align: center;
+    color: #f5f6f7;
+    margin-top: 30px;
+}
+
+.address {
+    margin-bottom: 5px;
+}
